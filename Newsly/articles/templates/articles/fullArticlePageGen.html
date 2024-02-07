@@ -1,0 +1,22 @@
+{% extends 'mainpages/nav_layout.html' %}
+
+{% block pagetitle %}
+{{ articleKey.title }}
+{% endblock %}
+
+{% block maincontent %}
+    <div class="DeleteEditButtons">
+        {% if user.is_authenticated %}
+            {% if user.is_staff %}
+                <a href="{% url 'EditPage' articleKey.id %}" id="editBtn">Edit</a>
+                <a href="{% url 'DeletePage' articleKey.id %}" id="delBtn">Delete</a>
+            {% endif %}
+        {% endif %}
+    </div>
+    <div class="coverContainer">
+        <img class="coverImage" src={{articleKey.cover_img}}>
+        <h1 class="mainH1 mainArticleH1">{{ articleKey.title }}</h1>
+    </div>
+    <p class="articleDateMain">{{ articleKey.date }}</p>
+    <p class="articleCopy">{{ articleKey.article_copy }}</p>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'mainpages/nav_layout.html' %}
+
+{% block pagetitle %}
+Add news
+{% endblock %}
+
+{% block maincontent %}
+    <h1 class="mainH1">Add new news article</h1>
+    <div class="additionalContainer">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.introduction }}<br>
+            {{ form.article_copy }}<br>
+            {{ form.cover_img }}<br>
+            {{ form.date }}<br><br>
+            <span>{{ errorText }}</span>
+            <button class="deleteFinBtn addBtnArtPage" type="submit">Add article</button>
+        </form>
+    </div>
+
+{% endblock %}

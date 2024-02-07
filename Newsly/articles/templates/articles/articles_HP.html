@@ -1,0 +1,27 @@
+{% extends 'mainpages/nav_layout.html' %}
+
+{% block pagetitle %}
+Articles overview
+{% endblock %}
+
+{% block maincontent %}
+    <h1 class="mainH1">All Articles</h1>
+    <div class="articlesContainer">
+        {% if newArt %}
+            {% for i in newArt %}
+                <div class="article">
+                    <div class="pageContainer">
+                        <div class="introArticleHP">
+                            <h3 class="articleHL">{{ i.title }}</h3>
+                            <p class="articleIntro">{{ i.introduction }}</p>
+                            <a href="{% url 'fullView' i.id %}" class="readMoreBtn">Read full version</a>
+                            <p class="articleIntroDate">{{ i.date }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>You don't have any articles yet.</p>
+        {% endif %}
+    </div>
+{% endblock %}

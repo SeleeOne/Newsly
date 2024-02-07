@@ -1,0 +1,508 @@
+body, html {
+    font-family: 'Oswald', sans-serif;
+    background: #08062b;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#content {
+    flex: 1 0 auto;
+}
+
+H1, H3, p, span {
+    color: #ffffff;
+}
+
+header {
+    background: rgb(1,22,78);
+    background: linear-gradient(322deg, rgba(1,22,78,1) 31%, rgba(78,9,121,1) 98%, rgba(8,7,105,0.742734593837535) 100%);
+    color: #ffffff;
+    border-bottom: 5px solid #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header span {
+    font-size: 50px;
+    font-weight: 700;
+    cursor: default;
+}
+
+header ul {
+        list-style: none;
+        margin-top: 20px;
+        display: flex;
+    }
+
+header ul li {
+    font-size: 18px;
+    color: #ffffff;
+    margin-left: 5px;
+    display: block;
+    transition: all .4s ease;
+    margin-right: 10px;
+}
+
+#salutation {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+header ul a {
+    text-decoration: none;
+}
+
+header li i {
+    margin-right: 5px;
+}
+
+header ul li:hover, header ul a:hover {
+    transform: scale(1.05);
+}
+
+.authBtn {
+    background: #3A0D6E;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.authBtn:hover {
+    background: #a60dba;
+}
+
+.addArtBtn {
+    background: #08062B;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+    border: 2px solid #0e94df;
+}
+
+.addArtBtn:hover {
+    background: #0e94df;
+    border: 2px solid #08062B;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3%;
+    background: #000000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.articlesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.article {
+    min-width: 300px;
+    width: 400px;
+    margin: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    height: 250px;
+    background: #08062b;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    position: relative;
+}
+
+.mainH1 {
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.containerTextUsual {
+    margin-top: 100px;
+}
+
+.containerTextUsual p, .containerTextUsual H3 {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 18px;
+    text-align: left;
+    max-width: 800px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+#contactTextContainer {
+    margin-top: 100px;
+    text-align: center;
+    }
+
+#contactTextContainer p, #contactTextContainer address {
+    font-size: 18px;
+    max-width: 800px;
+    text-align: justify;
+    line-height: 1.7;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 auto;
+    border-left: 5px solid #0E94DF;
+    padding-left: 10px;
+}
+
+#contactTextContainer a {
+    font-size: 18px;
+    max-width: 800px;
+    text-align: left;
+    line-height: 1.7;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    border-left: 5px solid #0E94DF;
+    padding-left: 10px;
+}
+
+#contactTextContainer a:hover {
+    color: #a60dba;
+}
+
+.lastEl {
+    padding-bottom: 50px;
+}
+
+.articleHL {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.articleIntro {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+}
+
+.readMoreBtn {
+    position: absolute;
+    bottom: 40px;
+    right: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #3A0D6E;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+.readMoreBtn:hover {
+    background: #a60dba;
+}
+
+.coverContainer {
+    text-align: center;
+    position: relative;
+}
+
+.coverImage {
+    width: 1280px;
+    height: 720px;
+    margin-top: 50px;
+}
+
+.mainArticleH1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    background: #000000;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+.articleIntroDate {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.articleDateMain {
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+
+.articleCopy {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 18px;
+    text-align: left;
+    max-width: 800px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.HomePageText {
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding-top: 80px;
+}
+
+.HomePageText p {
+    margin-top: 100px;
+}
+
+.HPauthBTN {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    list-style: none;
+    margin-top: 100px;
+}
+
+.HPauthBTN a {
+    color: #ffffff;
+    padding: 15px 20px 15px 20px;
+    text-decoration: none;
+    background: #3A0D6E;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.HPauthBTN a:hover {
+    background: #a60dba;
+}
+
+.DeleteEditButtons {
+    text-align: center;
+    padding: 50px 20px 5px 20px;
+}
+
+#editBtn{
+    background: #0c6606;
+    padding: 5px 25px 5px 25px;
+    border-radius: 5px;
+    margin-right: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#editBtn:hover {
+    background: #0dab0a;
+}
+
+#delBtn{
+    background: #a60707;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    margin-right: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#delBtn:hover {
+    background: #e71414;
+}
+
+.additionalContainer {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.deleteFinBtn {
+    background: #a60707;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    margin-right: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.deleteFinBtn:hover {
+    background: #e71414;
+}
+
+.formField {
+    width: 700px;
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid #0E94DF;
+}
+
+.formFieldImage {
+    color: #ffffff;
+    border: none;
+}
+
+.addBtnArtPage {
+    background: #0c6606;
+}
+
+.addBtnArtPage:hover {
+    background: #0dab0a;
+}
+
+.RegForm {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.RegForm input {
+    width: 300px;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid #0E94DF;
+    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.message {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.btn_reg {
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .coverImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .containerTextUsual {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+    .article {
+        min-width: 550px;
+        width: 700px;
+    }
+
+    .articlesContainer {
+        justify-content: center;
+    }
+    .articleCopy {
+        max-width: 500px;
+    }
+
+    .formField {
+        width: 500px;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .authBtn {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 699px) {
+    .article {
+        width: 350px;
+        height: 300px
+    }
+
+    .articlesContainer {
+        justify-content: center;
+    }
+
+    .articleCopy {
+        width: 300px;
+    }
+
+    .mapsMobile {
+        width: 350px;
+        height: 300px;
+    }
+
+    .formField {
+        width: 250px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #main_NAV {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    header ul {
+        margin-top: 5px;
+    }
+
+    .authBtn {
+        margin-bottom: 15px;
+    }
+
+    .mainArticleH1{
+        bottom: 5px;
+        font-size: 17px;
+        padding: 5px;
+    }
+
+    .DeleteEditButtons {
+        display: flex;
+        flew-direction: column;
+    }
+}

@@ -1,0 +1,21 @@
+{% extends 'mainpages/nav_layout.html' %}
+
+{% block pagetitle %}
+Login
+{% endblock %}
+
+{% block maincontent %}
+    <h1 class="containerTextUsual mainH1">Login</h1>
+    <div>
+        <form class="RegForm" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <input class="btn_reg deleteFinBtn addBtnArtPage" type="submit" value="Login"><br><br>
+
+            {% for messages in messages %}
+                <p class="message">{{messages}}</p>
+            {% endfor %}
+        </form>
+    </div>
+{% endblock %}

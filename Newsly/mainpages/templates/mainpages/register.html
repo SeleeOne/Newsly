@@ -1,0 +1,28 @@
+{% extends 'mainpages/nav_layout.html' %}
+
+{% block pagetitle %}
+Registration
+{% endblock %}
+
+{% block maincontent %}
+    <h1 class="mainH1">Registration</h1>
+    <div>
+        <form class="RegForm" method="post">
+            {% csrf_token %}
+            {{ form.username.label }}
+            {{ form.username }}<br><br>
+            {{ form.first_name.label }}
+            {{ form.first_name }}<br><br>
+            {{ form.last_name.label }}
+            {{ form.last_name }}<br><br>
+            {{ form.email.label }}
+            {{ form.email }}<br><br>
+            {{ form.password1.label }}
+            {{ form.password1 }}<br><br>
+            {{ form.password2.label }}
+            {{ form.password2 }}<br><br>
+            <input class="btn_reg deleteFinBtn addBtnArtPage" type="submit" name="Register"><br><br>
+            {{ form.errors }}
+        </form>
+    </div>
+{% endblock %}
